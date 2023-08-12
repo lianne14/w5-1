@@ -4,16 +4,190 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <title>Admin</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%>
 
-    <h1 class="index-title">我是首頁</h1>
-    <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
+    <!-- 這邊是nav -->
+    <div class="nav flex-column bg-light">
+      <a href="#" class="nav-logo">
+        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/053bcf3afe88348b79971d2ea8de28f179cba5c5/week5/logo-ANSWER.svg" alt="logo-ANSWER">
+      </a>
+      <a href="#" class="nav-link text-dark">
+        <p class="d-flex"><span class="material-icons text-dark pe-3">assessment
+        </span>Dashboard</p>
+      </a>
+        
+      <a href="#" class="nav-link text-dark">
+        <p class="d-flex"><span class="material-icons text-dark pe-3">question_answer
+        </span>Question</p>
+      </a>
+        
+      <a href="#" class="nav-link text-dark">
+        <p class="d-flex"><span class="material-icons text-dark pe-3">assignment
+        </span>Assignment</p>
+      </a>
+        
+      <a href="#" class="nav-link text-dark">
+        <p class="d-flex "><span class="material-icons text-dark pe-3">supervisor_account
+        </span>Course</p>
+      </a>
+        
+      <a href="#" class="nav-link text-success">
+        <p class="d-flex"><span class="material-icons text-success pe-3">supervisor_account
+        </span>Admin</p>
+      </a>
+        
+      <a href="#" class="nav-link text-dark">
+        <p class="d-flex"><span class="material-icons text-dark pe-3">settings
+        </span>Settings</p>
+      </a>
+      <!-- nav結束 -->
+        
+    </div>
 
-    <%- include('./layout/footer'); -%>
+      <div class="main">
+        <div class="sction d-flex justify-content-between">
+          <div class="left d-flex">
+            <p class="fs-4 fw-bold mt-5">Admin</p>
+            <!-- 這邊寫了一個mt-5 -->
+            <!-- 以下是彈跳視窗 -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-Light d-flex" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <span class="material-icons pe-2">
+                add
+              </span>
+              Add New Admin
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-dialog modal-dialog-scrollable">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 彈跳視窗結束 -->
+          </div>
+          <div class="right">
+            <span class="material-icons pe-2 success">
+              search
+            </span>
+            <span class="material-icons pe-2 success">
+              notifications_active
+            </span>
+          </div>
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col d-flex align-items-center">ID <span class="material-icons">expand_more</span></th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Verified</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">#1</th>
+              <td>Emir Wicks</td>
+              <td>emir.wicks@mail.com</td>
+              <td>Yes</td>
+              <td><span class="material-icons">visibility</span></td>
+              <td><span class="material-icons">edit</span></td>
+            </tr>
+            <tr>
+              <th scope="row">#2</th>
+              <td>Zaina Goldsmith</td>
+              <td>zaina.goldsmith@mail.com</td>
+              <td>Yes</td>
+              <td><span class="material-icons">visibility</span></td>
+              <td><span class="material-icons">edit</span></td>
+            </tr>
+            <tr>
+              <th scope="row">#3</th>
+              <td>Mahima Lopez</td>
+              <td>mahima.lopez@mail.com</td>
+              <td>Yes</td>
+              <td><span class="material-icons">visibility</span></td>
+              <td><span class="material-icons">edit</span></td>
+            </tr>
+            <tr>
+              <th scope="row">#4</th>
+              <td>Pharrell Murray</td>
+              <td>pharrell.murray@mail.com</td>
+              <td>Yes</td>
+              <td><span class="material-icons">visibility</span></td>
+              <td><span class="material-icons">edit</span></td>
+            </tr>
+            <tr>
+              <th scope="row">#5</th>
+              <td>Annika Mcbride</td>
+              <td>annika.mcbride@mail.com</td>
+              <td>Yes</td>
+              <td><span class="material-icons">visibility</span></td>
+              <td><span class="material-icons">edit</span></td>
+            </tr>
+            <tr>
+              <th scope="row">#6</th>
+              <td>Fatimah Clark</td>
+              <td>fatimah.clark@mail.com</td>
+              <td>Yes</td>
+              <td><span class="material-icons">visibility</span></td>
+              <td><span class="material-icons">edit</span></td>
+            </tr>
+            <tr>
+              <th scope="row">#7</th>
+              <td>Klaudia Rhodes</td>
+              <td>klaudia.rhodes@mail.com</td>
+              <td>Yes</td>
+              <td><span class="material-icons">visibility</span></td>
+              <td><span class="material-icons">edit</span></td>
+            </tr>
+            <tr>
+              <th scope="row">#8</th>
+              <td>Tillie Lucero</td>
+              <td>tillie.lucero@mail.com</td>
+              <td>Yes</td>
+              <td><span class="material-icons">visibility</span></td>
+              <td><span class="material-icons">edit</span></td>
+            </tr>
+            <tr>
+              <th scope="row">#9</th>
+              <td>Sabrina Stephenson</td>
+              <td>sabrina.stephenson@mail.com</td>
+              <td>Yes</td>
+              <td><span class="material-icons">visibility</span></td>
+              <td><span class="material-icons">edit</span></td>
+            </tr>
+            <tr>
+              <th scope="row">#10</th>
+              <td>Annie Smith</td>
+              <td>annie.smith@mail.com</td>
+              <td>Yes</td>
+              <td><span class="material-icons">visibility</span></td>
+              <td><span class="material-icons">edit</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
 
-    <script type="module" src="../main.js"></script>
+    <!-- <%- include('./layout/footer'); -%> -->
+
+    <script type="module" src="../main.js"></script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   </body>
 </html>
