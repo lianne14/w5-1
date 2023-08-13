@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <script type="module" crossorigin src="/w5-1/assets/main-17735488.js"></script>
-    <link rel="stylesheet" href="/w5-1/assets/main-8c73bf65.css">
+    <script type="module" crossorigin src="/w5-1/assets/main-e6b937b0.js"></script>
+    <link rel="stylesheet" href="/w5-1/assets/main-d3591bfc.css">
   </head>
   <body>
 
@@ -16,32 +16,32 @@
         <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/053bcf3afe88348b79971d2ea8de28f179cba5c5/week5/logo-ANSWER.svg" alt="logo-ANSWER">
       </a>
       <a href="#" class="nav-link text-dark">
-        <p class="d-flex"><span class="material-icons text-dark pe-3">assessment
+        <p class="d-flex fw-bold"><span class="material-icons text-dark pe-3">assessment
         </span>Dashboard</p>
       </a>
         
       <a href="#" class="nav-link text-dark">
-        <p class="d-flex"><span class="material-icons text-dark pe-3">question_answer
+        <p class="d-flex fw-bold"><span class="material-icons text-dark pe-3">question_answer
         </span>Question</p>
       </a>
         
       <a href="#" class="nav-link text-dark">
-        <p class="d-flex"><span class="material-icons text-dark pe-3">assignment
+        <p class="d-flex fw-bold"><span class="material-icons text-dark pe-3">assignment
         </span>Assignment</p>
       </a>
         
       <a href="#" class="nav-link text-dark">
-        <p class="d-flex "><span class="material-icons text-dark pe-3">supervisor_account
+        <p class="d-flex fw-bold"><span class="material-icons text-dark pe-3">supervisor_account
         </span>Course</p>
       </a>
         
       <a href="#" class="nav-link text-success">
-        <p class="d-flex"><span class="material-icons text-success pe-3">supervisor_account
+        <p class="d-flex fw-bold"><span class="material-icons text-success pe-3">supervisor_account
         </span>Admin</p>
       </a>
         
       <a href="#" class="nav-link text-dark">
-        <p class="d-flex"><span class="material-icons text-dark pe-3">settings
+        <p class="d-flex fw-bold"><span class="material-icons text-dark pe-3">settings
         </span>Settings</p>
       </a>
       <!-- nav結束 -->
@@ -50,31 +50,103 @@
 
       <div class="main">
         <div class="container">
-          <div class="sction d-flex justify-content-between align-items-center pt-5 pe-1">
+          <div class="sction d-flex justify-content-between align-items-center pt-5">
             <div class="left d-flex">
-              <p class="fs-4 fw-bold">Admin</p>
+              <p class="fs-4 fw-bold pe-3">Admin</p>
               <!-- 以下是彈跳視窗 -->
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-Light d-flex" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                <span class="material-icons pe-2">
+                <span class="material-icons pe-2 text-success align-middle">
                   add
                 </span>
                 Add New Admin
               </button>
               <!-- Modal -->
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal fade px-4" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                      <h5 class="modal-title fw-bold fs-5" id="staticBackdropLabel">New Admin</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-dialog modal-dialog-scrollable">
-                      ...
+                    <!-- 這邊是表單 -->
+                    <div class="modal-dialog-scrollable p-4">
+                      <form>
+                        <div>
+                        <p class="fw-bold fs-5">Account</p>
+                          <label for="name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="name" placeholder="Lianne._.">
+                        </div>
+                        <div>
+                          <label for="email" class="form-label pt-2">Email address</label>
+                          <input type="email" class="form-control" id="email">
+                        </div>
+
+                        <div class="">
+                          <p   class="fw-bold fs-5 pt-2">Verification</p>
+                          <p><span class="material-icons text-danger align-middle pe-2">report_problem</span>Unverified</p>
+                          <!-- align-middle 可以置中 -->
+                          <button type="button" class="btn btn-outline-success fw-bold full">Send Verification Mail</button>
+                        </div>
+                      
+                        <div class="">
+                          <p   class="fw-bold fs-5 pt-2">Access Level</p>
+                          <div class="dropdown">
+                            <button class="btn btn-outline-dark dropdown-toggle dropdown-toggle-split full right" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-Choose access level-
+                            </button>
+
+                            <ul class="dropdown-menu full" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        
+                        <div class="">
+                          <p class="fw-bold fs-5 pt-2">Custom Access</p>
+                          <div class="form-check pb-2">
+                            <!-- checked 是預選 -->
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                              Lecture
+                            </label>
+                          </div>
+
+                          <div class="form-check pb-2">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Coupon
+                            </label>
+                          </div>
+
+                          <div class="form-check pb-2">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Message
+                            </label>
+                          </div>
+
+                          <div class="form-check pb-2">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Setting
+                            </label>
+                          </div>
+
+                          <div class="form-check pb-2">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Task Menu
+                            </label>
+                          </div>
+                        </div>
+
+                      </form>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Understood</button>
+                      <button type="button" class="btn fw-bold btn-outline-success" data-bs-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-success">Update</button>
                     </div>
                   </div>
                 </div>
@@ -90,101 +162,214 @@
               </span>
             </div>
           </div>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col d-flex align-items-center">ID <span class="material-icons">expand_more</span></th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Verified</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">#1</th>
-                <td>Emir Wicks</td>
-                <td>emir.wicks@mail.com</td>
-                <td>Yes</td>
-                <td><span class="material-icons">visibility</span></td>
-                <td><span class="material-icons">edit</span></td>
-              </tr>
-              <tr>
-                <th scope="row">#2</th>
-                <td>Zaina Goldsmith</td>
-                <td>zaina.goldsmith@mail.com</td>
-                <td>Yes</td>
-                <td><span class="material-icons">visibility</span></td>
-                <td><span class="material-icons">edit</span></td>
-              </tr>
-              <tr>
-                <th scope="row">#3</th>
-                <td>Mahima Lopez</td>
-                <td>mahima.lopez@mail.com</td>
-                <td>Yes</td>
-                <td><span class="material-icons">visibility</span></td>
-                <td><span class="material-icons">edit</span></td>
-              </tr>
-              <tr>
-                <th scope="row">#4</th>
-                <td>Pharrell Murray</td>
-                <td>pharrell.murray@mail.com</td>
-                <td>Yes</td>
-                <td><span class="material-icons">visibility</span></td>
-                <td><span class="material-icons">edit</span></td>
-              </tr>
-              <tr>
-                <th scope="row">#5</th>
-                <td>Annika Mcbride</td>
-                <td>annika.mcbride@mail.com</td>
-                <td>Yes</td>
-                <td><span class="material-icons">visibility</span></td>
-                <td><span class="material-icons">edit</span></td>
-              </tr>
-              <tr>
-                <th scope="row">#6</th>
-                <td>Fatimah Clark</td>
-                <td>fatimah.clark@mail.com</td>
-                <td>Yes</td>
-                <td><span class="material-icons">visibility</span></td>
-                <td><span class="material-icons">edit</span></td>
-              </tr>
-              <tr>
-                <th scope="row">#7</th>
-                <td>Klaudia Rhodes</td>
-                <td>klaudia.rhodes@mail.com</td>
-                <td>Yes</td>
-                <td><span class="material-icons">visibility</span></td>
-                <td><span class="material-icons">edit</span></td>
-              </tr>
-              <tr>
-                <th scope="row">#8</th>
-                <td>Tillie Lucero</td>
-                <td>tillie.lucero@mail.com</td>
-                <td>Yes</td>
-                <td><span class="material-icons">visibility</span></td>
-                <td><span class="material-icons">edit</span></td>
-              </tr>
-              <tr>
-                <th scope="row">#9</th>
-                <td>Sabrina Stephenson</td>
-                <td>sabrina.stephenson@mail.com</td>
-                <td>Yes</td>
-                <td><span class="material-icons">visibility</span></td>
-                <td><span class="material-icons">edit</span></td>
-              </tr>
-              <tr>
-                <th scope="row">#10</th>
-                <td>Annie Smith</td>
-                <td>annie.smith@mail.com</td>
-                <td>Yes</td>
-                <td><span class="material-icons">visibility</span></td>
-                <td><span class="material-icons">edit</span></td>
-              </tr>
-            </tbody>
-          </table>
-                </div>
+          
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">ID <span class="material-icons align-middle text-success">expand_more</span></th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Verified</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="align-middle">
+                  <th scope="row">#1</th>
+                  <td>Emir Wicks</td>
+                  <td>emir.wicks@mail.com</td>
+                  <td>Yes</td>
+
+                  <!-- 以下是眼睛icon的彈跳視窗 -->
+                  <td>
+                    <!-- Button trigger modal -->
+                    <button type="button1" class="btn btn-Light d-flex" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      <!-- 這邊改icon -->
+                      <span class="material-icons">visibility</span>
+                    </button>
+                    <!-- Modal -->
+                    
+                    </td>
+              <!-- 眼睛icon的彈跳視窗結束 -->
+
+
+                  <!-- 以下是編輯icon的彈跳視窗 -->
+                  <td>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-Light d-flex" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      <!-- 這邊改icon -->
+                      <span class="material-icons">edit</span>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade px-4" id="staticBackdropLabel1-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title fw-bold fs-5" id="staticBackdropLabel1-1">New Admin</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <!-- 這邊是表單 -->
+                          <div class="modal-dialog-scrollable p-4">
+                            <form>
+                              <div>
+                              <p class="fw-bold fs-5">Account</p>
+                                <label for="name1-1" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name1-1">
+                              </div>
+                              <div>
+                                <label for="email1-1" class="form-label pt-2 bg-secondary">Email address</label>
+                                <input type="email" class="form-control" id="email1-1">
+                              </div>
+
+                              <div class="">
+                                <p   class="fw-bold fs-5 pt-2">Verification</p>
+                                <p><span class="material-icons text-danger align-middle pe-2">report_problem</span>Unverified</p>
+                                <!-- align-middle 可以置中 -->
+                                <button type="button" class="btn btn-outline-success fw-bold full">Send Verification Mail</button>
+                              </div>
+                            
+                              <div class="">
+                                <p   class="fw-bold fs-5 pt-2">Access Level</p>
+                                <div class="dropdown">
+                                  <button class="btn btn-outline-dark dropdown-toggle dropdown-toggle-split full right" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-Choose access level-
+                                  </button>
+
+                                  <ul class="dropdown-menu full" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              
+                              <div class="">
+                                <p class="fw-bold fs-5 pt-2">Custom Access</p>
+                                <div class="form-check pb-2">
+                                  <!-- checked 是預選 -->
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                                  <label class="form-check-label" for="defaultCheck1">
+                                    Lecture
+                                  </label>
+                                </div>
+
+                                <div class="form-check pb-2">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1">
+                                    Coupon
+                                  </label>
+                                </div>
+
+                                <div class="form-check pb-2">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1">
+                                    Message
+                                  </label>
+                                </div>
+
+                                <div class="form-check pb-2">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1">
+                                    Setting
+                                  </label>
+                                </div>
+
+                                <div class="form-check pb-2">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1">
+                                    Task Menu
+                                  </label>
+                                </div>
+                              </div>
+
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn fw-bold btn-outline-success" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-success">Update</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </td>
+              <!-- 編輯icon的彈跳視窗結束 -->
+                </tr>
+                <tr>
+                  <th scope="row">#2</th>
+                  <td>Zaina Goldsmith</td>
+                  <td>zaina.goldsmith@mail.com</td>
+                  <td>Yes</td>
+                  <td><span class="material-icons">visibility</span></td>
+                  <td><span class="material-icons">edit</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">#3</th>
+                  <td>Mahima Lopez</td>
+                  <td>mahima.lopez@mail.com</td>
+                  <td>Yes</td>
+                  <td><span class="material-icons">visibility</span></td>
+                  <td><span class="material-icons">edit</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">#4</th>
+                  <td>Pharrell Murray</td>
+                  <td>pharrell.murray@mail.com</td>
+                  <td>Yes</td>
+                  <td><span class="material-icons">visibility</span></td>
+                  <td><span class="material-icons">edit</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">#5</th>
+                  <td>Annika Mcbride</td>
+                  <td>annika.mcbride@mail.com</td>
+                  <td>Yes</td>
+                  <td><span class="material-icons">visibility</span></td>
+                  <td><span class="material-icons">edit</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">#6</th>
+                  <td>Fatimah Clark</td>
+                  <td>fatimah.clark@mail.com</td>
+                  <td>Yes</td>
+                  <td><span class="material-icons">visibility</span></td>
+                  <td><span class="material-icons">edit</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">#7</th>
+                  <td>Klaudia Rhodes</td>
+                  <td>klaudia.rhodes@mail.com</td>
+                  <td>Yes</td>
+                  <td><span class="material-icons">visibility</span></td>
+                  <td><span class="material-icons">edit</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">#8</th>
+                  <td>Tillie Lucero</td>
+                  <td>tillie.lucero@mail.com</td>
+                  <td>Yes</td>
+                  <td><span class="material-icons">visibility</span></td>
+                  <td><span class="material-icons">edit</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">#9</th>
+                  <td>Sabrina Stephenson</td>
+                  <td>sabrina.stephenson@mail.com</td>
+                  <td>Yes</td>
+                  <td><span class="material-icons">visibility</span></td>
+                  <td><span class="material-icons">edit</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">#10</th>
+                  <td>Annie Smith</td>
+                  <td>annie.smith@mail.com</td>
+                  <td>Yes</td>
+                  <td><span class="material-icons">visibility</span></td>
+                  <td><span class="material-icons">edit</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+         
         </div>
     
 
