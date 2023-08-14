@@ -139,8 +139,8 @@
                             </label>
                           </div>
                         </div>
-
                       </form>
+                      <!-- 表單結束 -->
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn fw-bold btn-outline-success" data-bs-dismiss="modal">Cancel</button>
@@ -182,113 +182,56 @@
                   <!-- 以下是眼睛icon的彈跳視窗 -->
                   <td>
                     <!-- Button trigger modal -->
-                    <button type="button1" class="btn btn-Light d-flex" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button type="button" class="btn btn-Light" data-bs-toggle="modal" data-bs-target="#exampleModal">
                       <!-- 這邊改icon -->
                       <span class="material-icons">visibility</span>
                     </button>
                     <!-- Modal -->
-                    
+                    <div class="modal fade px-4" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                           
+                          <div class="d-flex align-items-start row px-1 position-relative align-middle">
+                            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week5/emir.jpeg" alt="Emir Wicks img" class="pe-2 mt-4 col-5">
+
+                            <div class="py-4 col-7">
+                              <p>#1<br>Admin<br><span class="fw-bold fs-5">Emir Wicks</span><br><span class="text-gary">emir.wicks@mail.com</span></p>
+                              <p class="align-middle d-flex justify-content-between">
+                                <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                  Verified
+                                </a>
+                                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                  <span class="material-icons text-success">
+                                    expand_more
+                                  </span>
+                                </button>
+                              </p>
+                              <div class="collapse" id="collapseExample">
+                                <button type="button" class="btn btn-outline-danger">Deactivate</button>
+                                <button type="button" class="btn btn-success">Edit</button>
+                              </div>
+                            </div>
+                            <button type="button" class="btn-close col-1 position-absolute top-0 end-0 m-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                         </div>
+                        </div>
+                      </div>
+                    </div>
                     </td>
-              <!-- 眼睛icon的彈跳視窗結束 -->
+                   <!-- 眼睛icon的彈跳視窗結束 -->
 
 
                   <!-- 以下是編輯icon的彈跳視窗 -->
                   <td>
                     <!-- Button trigger modal -->
+                    <!-- 8/14 BUTTON這一條找看看哪裡要改因為就算刪掉內容modal還是跟上面一樣完整 -->
                     <button type="button" class="btn btn-Light d-flex" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <!-- 這邊改icon -->
                       <span class="material-icons">edit</span>
                     </button>
                     <!-- Modal -->
-                    <div class="modal fade px-4" id="staticBackdropLabel1-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title fw-bold fs-5" id="staticBackdropLabel1-1">New Admin</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <!-- 這邊是表單 -->
-                          <div class="modal-dialog-scrollable p-4">
-                            <form>
-                              <div>
-                              <p class="fw-bold fs-5">Account</p>
-                                <label for="name1-1" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name1-1">
-                              </div>
-                              <div>
-                                <label for="email1-1" class="form-label pt-2 bg-secondary">Email address</label>
-                                <input type="email" class="form-control" id="email1-1">
-                              </div>
-
-                              <div class="">
-                                <p   class="fw-bold fs-5 pt-2">Verification</p>
-                                <p><span class="material-icons text-danger align-middle pe-2">report_problem</span>Unverified</p>
-                                <!-- align-middle 可以置中 -->
-                                <button type="button" class="btn btn-outline-success fw-bold full">Send Verification Mail</button>
-                              </div>
-                            
-                              <div class="">
-                                <p   class="fw-bold fs-5 pt-2">Access Level</p>
-                                <div class="dropdown">
-                                  <button class="btn btn-outline-dark dropdown-toggle dropdown-toggle-split full right" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-Choose access level-
-                                  </button>
-
-                                  <ul class="dropdown-menu full" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                  </ul>
-                                </div>
-                              </div>
-                              
-                              <div class="">
-                                <p class="fw-bold fs-5 pt-2">Custom Access</p>
-                                <div class="form-check pb-2">
-                                  <!-- checked 是預選 -->
-                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
-                                  <label class="form-check-label" for="defaultCheck1">
-                                    Lecture
-                                  </label>
-                                </div>
-
-                                <div class="form-check pb-2">
-                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                  <label class="form-check-label" for="defaultCheck1">
-                                    Coupon
-                                  </label>
-                                </div>
-
-                                <div class="form-check pb-2">
-                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                  <label class="form-check-label" for="defaultCheck1">
-                                    Message
-                                  </label>
-                                </div>
-
-                                <div class="form-check pb-2">
-                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                  <label class="form-check-label" for="defaultCheck1">
-                                    Setting
-                                  </label>
-                                </div>
-
-                                <div class="form-check pb-2">
-                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                  <label class="form-check-label" for="defaultCheck1">
-                                    Task Menu
-                                  </label>
-                                </div>
-                              </div>
-
-                            </form>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn fw-bold btn-outline-success" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-success">Update</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    
                     </td>
               <!-- 編輯icon的彈跳視窗結束 -->
                 </tr>
