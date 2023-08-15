@@ -1,0 +1,37 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-Light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <!-- 這邊改icon -->
+    <span class="material-icons">visibility</span>
+  </button>
+  <!-- Modal -->
+  <div class="modal fade px-4" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+         
+        <div class="d-flex align-items-start row px-1 position-relative align-middle">
+          <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week5/emir.jpeg" alt="Emir Wicks img" class="pe-2 mt-4 col-5">
+
+          <div class="py-4 col-7">
+            <p>#1<br>Admin<br><span class="fw-bold fs-5">Emir Wicks</span><br><span class="text-gary">emir.wicks@mail.com</span></p>
+            <p class="align-middle d-flex justify-content-between">
+              <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Verified
+              </a>
+              <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <span class="material-icons text-success">
+                  expand_more
+                </span>
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <button type="button" class="btn btn-outline-danger col-7 me-1">Deactivate</button>
+              <button type="button" class="btn btn-success col-4">Edit</button>
+            </div>
+          </div>
+          <button type="button" class="btn-close col-1 position-absolute top-0 end-0 m-4" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
