@@ -1,24 +1,46 @@
-p{
-    margin-bottom: 0;
-}
-
 a{
     text-decoration: none;
-    color: black;
 }
 
-nav{
+.nav {
+    /* 用 position: fixed; 可以固定住側欄 */
     position: fixed;
-    min-width: 200px; //最小寬度
+    min-width: 250px;
     min-height: 100vh;
-    background-color: #F8F9FA;
-    padding: 40px 12px;
 
-    li{
+    &-link{
         padding: 12px 32px;
+        position: relative;
+    }
+
+    &-logo{
+        padding: 42px 12px;
     }
 }
 
-main{
-    margin-left: 200px;
+.nav-link.hover::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 32px;
+    border-left: 4px solid #198754;
+}
+
+.main {
+    margin-left: 250px;
+}
+
+.full{
+    width: 100%;
+}
+
+.modal-header {
+    border-bottom: 0 !important;
+}
+
+
+.user img{
+    width: 40px;
+    height: 40px;
 }
